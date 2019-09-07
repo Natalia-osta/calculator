@@ -1,0 +1,32 @@
+h1{
+    color: orange;
+    text-transform: uppercase;
+}
+main{
+    width: 500px;
+    padding: 20px 50px;
+    background-color: #333;
+    margin: 20vh auto;
+}
+.display{
+    display: block;
+    background: #333;
+    border: none;
+    width: 100%;
+    font-size: 34px;
+    color: #fff;
+}
+.display::placeholder{
+    color:#fff;
+}
+button{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+}
+.nums button{
+    color
+}
