@@ -1,23 +1,45 @@
 h1{
     color: orange;
     text-transform: uppercase;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
 }
-main{
-    width: 500px;
-    padding: 20px 50px;
-    background-color: #333;
-    margin: 20vh auto;
+.swicher{
+    margin-left: 15px;
+}
+.calc{
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    margin: 40px auto;
+    background: #333;
+    border-radius: 20px;
+    padding: 15px 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border: 3px solid orange;
 }
 .display{
     display: block;
     background: #333;
-    border: none;
-    width: 100%;
     font-size: 34px;
-    color: #fff;
+    color: orange;
+    border: 2px solid orange;
+    line-height: 60px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    transition: .3s all;
 }
 .display::placeholder{
     color:#fff;
+}
+.nums{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 120px;
+}
+.operators{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 120px;
 }
 button{
     display: inline-block;
@@ -26,9 +48,36 @@ button{
     border-radius: 50%;
     border: none;
     color: #000;
-
+    justify-self: center;
+    cursor: pointer;
+    margin: 5px;
+    transition: .3s all;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
-
-.nums{
-
+button:hover{
+    background-color:  orange;
+}
+button:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+.hide{
+    opacity: 0;
+    transition: .3s all;
+}
+.online{
+    position: relative;
+    background-color: orange;
+    color: rgba(0, 0, 0, 0);
+}
+.online::before{
+    content: "OFF";
+    position: absolute;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
